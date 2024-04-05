@@ -1,25 +1,16 @@
-<title>Receitas Palmirinha</title>
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas Palmirinha</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Receitas da Palmirinha!</h1>
-    <!-- Tags de templates-->
-    Endereço do {{Nome}} <br>
-    {{ Endereco }}, {{Bairro}} - {{Cidade}} - {{Estado}}
-
-    <div>
-        Ingredientes:
-        <ul>
-            {% for ing in Ingredientes %}
-                <li>{{ ing }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+    <div>Receitas da palmirinha!</div> 
+    <ul>
+        {% for receita in receitas %}
+        <li><a href='/receita/{{ receita.id }}'>{{ receita.nome }} </a> ({{ receita.dificuldade }})</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
